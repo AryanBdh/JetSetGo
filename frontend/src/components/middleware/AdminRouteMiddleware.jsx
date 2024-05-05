@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import API from "../../API";
 import { Link } from 'react-router-dom';
+import "../../scss/admin.css";
 
 export default function AdminRouteMiddleware() {
   const [isLogin, setIsLogin] = useState(false);
@@ -45,7 +46,7 @@ export default function AdminRouteMiddleware() {
 
   const logout = () => {
     localStorage.clear();
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 
 
@@ -79,10 +80,7 @@ export default function AdminRouteMiddleware() {
                 </div>
                 <ul>
                   <li>
-                    <Link to="/admin">Dashboard</Link>
-                  </li>
-                  <li>
-                    <Link to="/admin/add-user">Add User</Link>
+                    <Link to="/admin/dashboard">Dashboard</Link>
                   </li>
                   <li>
                     <Link to="/admin/show-users">Users</Link>
@@ -91,10 +89,10 @@ export default function AdminRouteMiddleware() {
                     <Link to="/admin/manage-category">Manage Category</Link>
                   </li>
                   <li>
-                    <Link to="/admin/add-news">Add News</Link>
+                    <Link to="/admin/add-news">Add Travel Destination</Link>
                   </li>
                   <li>
-                    <Link to="/admin/show-news">Show News</Link>
+                    <Link to="/admin/show-news">Show Travel Lists</Link>
                   </li>
                 </ul>
               </div>

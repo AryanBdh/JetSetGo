@@ -6,19 +6,20 @@ import img1 from "../images/sunset.jpg";
 import img2 from "../images/town.jpg";
 import img3 from "../images/medal.png";
 import "../scss/style.css";
-import LoginComponent from "./auth/LoginComponent";
 
 function HomeComponent() {
   const circle = {
     width: "1587.123px",
     height: "1744.212px",
+    // overflow: "hidden",
     // transform: "rotate(200.492deg)",
     borderRadius: "1787.123px",
     background: "#8EE7ED",
-    mixBlendMode: "multiply",
+    // mixBlendMode: "multiply",
     marginLeft: "700px",
     marginTop: "-1150px",
     position: "absolute",
+    zIndex: "-1",
   };
 
   const image = {
@@ -45,8 +46,7 @@ function HomeComponent() {
   return (
     <>
       <Header />
-      <LoginComponent />
-      <div style={{ overflow: "hidden", width: "100%" }}>
+      <div style={{ overflow: "hidden", width: "100%", display:"grid" }}>
         <div className="background-design" style={circle}>
           <div className="Image" style={image}>
             <img src={img1} alt="" width={"200px"} height={"300px"} />

@@ -3,7 +3,6 @@ import cors from 'cors';
 import express from 'express';
 import dotenv from 'dotenv';
 import connection from './database/connection.js';
-// import User from './models/User.js';
 import UserTableSeeder from './database/seeder/UserTableSeeder.js';
 dotenv.config();
 
